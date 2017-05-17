@@ -9,7 +9,7 @@ module Config
 
       # returns hash that was passed in to initialize
       def load
-        hash.is_a?(Hash) ? hash.deep_stringify_keys : {}
+        hash.is_a?(Hash) ? hash.with_indifferent_access : {}
       end
     end
   end
