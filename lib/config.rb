@@ -42,7 +42,7 @@ module Config
     config = Options.new
 
     # add settings sources
-    [sources + extra_sources].flatten.compact.uniq.each do |source|
+    [sources].flatten.compact.uniq.each do |source|
       config.add_source!(source)
     end
 
